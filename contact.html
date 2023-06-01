@@ -11,7 +11,7 @@
 		<div class="center">
 			<div class="font-arial">
         <div class="container">
-          <form action="action_page.php">
+          <form action="https://app.headlessforms.cloud/api/v1/form-submission/B3z2pz6exM" method="POST">
             <label for="fname">First Name</label>
             <input type="text" id="fname" name="firstname" placeholder="John">
             <label for="lname">Last Name</label>
@@ -30,12 +30,12 @@
             <label for="subject">Subject</label>
             <textarea id="subject" name="subject" placeholder="Write something.." style="height:75px"></textarea>
 
-            <input type="radio" id="html" name="fav_language" value="HTML">
-            <label for="html">HTML</label><br>  
-            <input type="radio" id="css" name="fav_language" value="CSS">
-            <label for="css">CSS</label><br>
-            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
-            <label for="javascript">JavaScript</label>
+            <input type="radio" id="freelance-gig" name="subject-reason" value="freelance-gig">
+            <label for="freelance-gig">Freelance gig</label><br>  
+            <input type="radio" id="invite-to-swimming" name="subject-reason" value="invite-to-swimming">
+            <label for="invite-to-swimming">Invite to swimming</label><br>
+            <input type="radio" id="report-bug" name="subject-reason" value="report-bug">
+            <label for="report-bug">Report a website bug</label>
             
             <fieldset class='gdprconsent'>
               <input type='checkbox' name='gdprconsent' id='gdprconsent' required='required' autocomplete='off' />
@@ -51,15 +51,6 @@
 </html>
 
 <style scoped>
-.center {
-	line-height: normal;
-  text-align: center;
-}
-
-.font-arial {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
 input[type=text], select, textarea {
   width: 100%;
   padding: 10px;
@@ -95,5 +86,19 @@ input[type=submit]:hover {
   padding: 20px;
   width: 25%;
   margin: auto;
+}
+
+.alignment-radio {
+	display: flex;
+	flex-direction: row;
+}
+
+.center {
+	line-height: normal;
+  text-align: center;
+}
+
+.font-arial {
+  font-family: Arial, Helvetica, sans-serif;
 }
 </style>
