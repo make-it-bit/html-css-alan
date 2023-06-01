@@ -11,13 +11,14 @@
 		<div class="center">
 			<div class="font-arial">
         <div class="container">
-          <form action="https://app.headlessforms.cloud/api/v1/form-submission/B3z2pz6exM" method="POST">
+          <!-- <form action="https://app.headlessforms.cloud/api/v1/form-submission/B3z2pz6exM" method="POST"> -->
+          <form id="contact-form">
             <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="John">
+            <input type="text" id="fname" name="firstname" placeholder="John" required>
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Snow">
+            <input type="text" id="lname" name="lastname" placeholder="Snow" required>
             <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="john@test.com">
+            <input type="text" id="email" name="email" placeholder="john@test.com" required>
         
             <label for="country">Country</label>
             <select id="country" name="country">
@@ -30,7 +31,7 @@
             <label for="subject">Subject</label>
             <textarea id="subject" name="subject" placeholder="Write something.." style="height:75px"></textarea>
 
-            <input type="radio" id="freelance-gig" name="subject-reason" value="freelance-gig">
+            <input type="radio" id="freelance-gig" name="subject-reason" value="freelance-gig" checked>
             <label for="freelance-gig">Freelance gig</label><br>  
             <input type="radio" id="invite-to-swimming" name="subject-reason" value="invite-to-swimming">
             <label for="invite-to-swimming">Invite to swimming</label><br>
@@ -42,13 +43,23 @@
               <label for='gdprconsent'>I agree to the privacy policy.</label>
             </fieldset>
 
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" onclick="submitForm()">
           </form>
         </div>
 			</div>
 		</div>
 	</body>
 </html>
+
+<script>
+  function submitForm() {
+    let formData = new FormData(document.getElementById("contact-form"));
+    fetch('https://app.headlessforms.cloud/api/v1/form-submission/B3z2pz6exM', {
+        method: 'POST',
+        body: formData
+      }).catch(error => console.log(error));
+  }
+</script>
 
 <style scoped>
 input[type=text], select, textarea {
