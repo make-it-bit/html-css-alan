@@ -1,150 +1,195 @@
 <!DOCTYPE html>
-<html>
-	<head>
-    <meta charset="UTF-8">
-		<meta name="description" content="Contact page">
-		<meta name="keywords" content="HTML, CSS, JavaScript">
-		<meta name="author" content="Alan Parik">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Contact</title>
-		<div class="center">
-			<div class="font-arial">
-					<h1>Contact form</h1>
-			</div>
-		</div>
-	</head>
-	<body>
-		<div class="center">
-			<div class="font-arial">
-        <div class="container">
-          <form id="contact-form">
-            <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="John" required>
-            <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Snow" required>
-            <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="john@test.com" required>
-        
-            <label for="country">Country</label>
-            <select id="country" name="country">
-              <option value="estonia">Estonia</option>
-              <option value="finland">Finland</option>
-              <option value="sweden">Sweden</option>
-              <option value="norway">Norway</option>
-            </select>
-        
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:75px" required></textarea>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link href="styles/shared.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="contact.html">Contact</a>
+    </div>
+    <div>
+      <form id="contact-form">
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstname"
+          placeholder="John"
+          required
+        />
+        <label for="lname">Last Name</label>
+        <input
+          type="text"
+          id="lname"
+          name="lastname"
+          placeholder="Snow"
+          required
+        />
+        <label for="email">Email</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="john@test.com"
+          required
+        />
 
-            <input type="radio" id="freelance-gig" name="subject-reason" value="freelance-gig" checked>
-            <label for="freelance-gig">Freelance gig</label><br>  
-            <input type="radio" id="invite-to-swimming" name="subject-reason" value="invite-to-swimming">
-            <label for="invite-to-swimming">Invite to swimming</label><br>
-            <input type="radio" id="report-bug" name="subject-reason" value="report-bug">
-            <label for="report-bug">Report a website bug</label>
-            
-            <fieldset class='gdprconsent'>
-              <input type='checkbox' name='gdprconsent' id='gdprconsent' autocomplete='off' />
-              <label for='gdprconsent'>I agree to the privacy policy.</label>
-            </fieldset>
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="estonia">Estonia</option>
+          <option value="finland">Finland</option>
+          <option value="sweden">Sweden</option>
+          <option value="norway">Norway</option>
+        </select>
 
-            <input type="submit" value="Submit" onclick="submitForm()">
-            <button onclick="checkform()">Check form</button>
-          </form>
-        </div>
-			</div>
-		</div>
-	</body>
+        <label for="subject">Subject</label>
+        <textarea
+          id="subject"
+          name="subject"
+          placeholder="Write something.."
+          style="height: 75px"
+          required
+        ></textarea>
+
+        <input
+          type="radio"
+          id="freelance-gig"
+          name="subject-reason"
+          value="freelance-gig"
+          checked
+        />
+        <label for="freelance-gig">Freelance gig</label><br />
+        <input
+          type="radio"
+          id="invite-to-swimming"
+          name="subject-reason"
+          value="invite-to-swimming"
+        />
+        <label for="invite-to-swimming">Invite to swimming</label><br />
+        <input
+          type="radio"
+          id="report-bug"
+          name="subject-reason"
+          value="report-bug"
+        />
+        <label for="report-bug">Report a website bug</label>
+
+        <fieldset class="gdprconsent">
+          <input
+            type="checkbox"
+            name="gdprconsent"
+            id="gdprconsent"
+            autocomplete="off"
+          />
+          <label for="gdprconsent">I agree to the privacy policy.</label>
+        </fieldset>
+
+        <input type="submit" value="Submit" onclick="submitForm()" />
+        <button onclick="checkform()">Check form</button>
+      </form>
+    </div>
+  </body>
 </html>
 
 <script>
   function submitForm() {
     let formData = new FormData(document.getElementById("contact-form"));
     if (checkform() == true) {
-      fetch('https://app.headlessforms.cloud/api/v1/form-submission/B3z2pz6exM', {
-        method: 'POST',
-        body: formData
-      }).catch(error => console.log(error));
+      fetch(
+        "https://app.headlessforms.cloud/api/v1/form-submission/B3z2pz6exM",
+        {
+          method: "POST",
+          body: formData,
+        }
+      ).catch((error) => console.log(error));
     }
   }
 
   function checkform() {
-    const form = document.getElementById('contact-form');
-    let inputs = form.getElementsByTagName('input');
+    const form = document.getElementById("contact-form");
+    let inputs = form.getElementsByTagName("input");
     for (let i = 0; i < inputs.length; i++) {
-        if(inputs[i].hasAttribute("required")){
-            if(inputs[i].value == ""){
-              return false;
-            }
+      if (inputs[i].hasAttribute("required")) {
+        if (inputs[i].value == "") {
+          return false;
         }
-    }
-    
-    inputs = form.getElementsByTagName('textarea');
-    for (let i = 0; i < inputs.length; i++) {
-        if(inputs[i].hasAttribute("required")){
-            if(inputs[i].value == ""){
-              return false;
-            }
-        }
+      }
     }
 
-    if (!document.getElementById('gdprconsent').checked) {
+    inputs = form.getElementsByTagName("textarea");
+    for (let i = 0; i < inputs.length; i++) {
+      if (inputs[i].hasAttribute("required")) {
+        if (inputs[i].value == "") {
+          return false;
+        }
+      }
+    }
+
+    if (!document.getElementById("gdprconsent").checked) {
       return false;
     }
 
     return true;
-}
+  }
 </script>
 
 <style scoped>
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
+  input[type="text"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
 
-input[type=submit] {
-  background-color: #2ab2af;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
+  input[type="submit"] {
+    background-color: #2ab2af;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
 
-input[type=submit]:hover {
-  background-color: #337177;
-}
+  input[type="submit"]:hover {
+    background-color: #337177;
+  }
 
-.gdprconsent {
-  margin-bottom: 20px;
-  border: none;
-}
+  .gdprconsent {
+    margin-bottom: 20px;
+    border: none;
+  }
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  width: 25%;
-  margin: auto;
-}
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 25%;
+    margin: auto;
+  }
 
-.alignment-radio {
-	display: flex;
-	flex-direction: row;
-}
+  .alignment-radio {
+    display: flex;
+    flex-direction: row;
+  }
 
-.center {
-	line-height: normal;
-  text-align: center;
-}
+  .center {
+    line-height: normal;
+    text-align: center;
+  }
 
-.font-arial {
-  font-family: Arial, Helvetica, sans-serif;
-}
+  .font-arial {
+    font-family: Arial, Helvetica, sans-serif;
+  }
 </style>

@@ -1,150 +1,86 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="description" content="About page">
-		<meta name="keywords" content="HTML, CSS, JavaScript">
-		<meta name="author" content="Alan Parik">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>About</title>
-		<div class="center">
-			<div class="font-arial">
-					<h1>About page</h1>
-			</div>
-		</div>
-	</head>
-	<body>
-		<div class="center">
-			<div class="font-arial">
-				<div class="container">
-					<button class="accordion"><img src="./assets/sleeping-face-svgrepo-com.svg">Sleeping</button>
-					<div class="panel">
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, consequuntur.</p>
-					</div>
-					<button class="accordion"><img src="./assets/eating-out-svgrepo-com.svg">Eating</button>
-					<div class="panel">
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing..</p>
-					</div>
-					<button class="accordion"><img src="./assets/cycling-svgrepo-com.svg">Cycling</button>
-					<div class="panel">
-						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis, quae voluptatem.</p>
-					</div>
-				</div>
-				<div class="container">
-					<table>
-						<tr>
-							<th>My favourite colors</th>
-							<th>My favourite animals</th>
-						</tr>
-						<tr>
-							<td>Green</td>
-							<td>Cats</td>
-						</tr>
-						<tr>
-							<td>Yellow</td>
-							<td>Capibaras</td>
-						</tr>
-					</table>
-				</div>
-			</div>
-		</div>
-	</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link href="styles/shared.css" rel="stylesheet" type="text/css" />
+    <link href="styles/about-style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="topnav">
+      <a href="index.html">Home</a>
+      <a class="active" href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="hobbies-container">
+      <button class="accordion">
+        <img
+          class="img--thumbnail"
+          src="./assets/sleeping-hobbie-thumbnail.svg"
+        />Sleeping
+      </button>
+      <div class="panel">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui,
+          consequuntur.
+        </p>
+      </div>
+      <button class="accordion">
+        <img
+          class="img--thumbnail"
+          src="./assets/eating-hobbie-thumbnail.svg"
+        />Eating
+      </button>
+      <div class="panel">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing..</p>
+      </div>
+      <button class="accordion">
+        <img
+          class="img--thumbnail"
+          src="./assets/cycling-hobbie-thumbnail.svg"
+        />Cycling
+      </button>
+      <div class="panel">
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis,
+          quae voluptatem.
+        </p>
+      </div>
+    </div>
+    <div class="container">
+      <table>
+        <tr>
+          <th>My favourite colors</th>
+          <th>My favourite animals</th>
+        </tr>
+        <tr>
+          <td>Green</td>
+          <td>Cats</td>
+        </tr>
+        <tr>
+          <td>Yellow</td>
+          <td>Capibaras</td>
+        </tr>
+      </table>
+    </div>
+  </body>
 </html>
 
-<style scoped>
-summary {
-	cursor: pointer;
-	font-size: larger;
-	margin-bottom: 20px;
-}
-
-details p {
-  font-size: larger;
-	color: gray;
-}
-
-img {
-  width: 32px;
-  height: 32px;
-	vertical-align: middle;
-	margin-right: 20px;
-	padding: auto;
-	border: solid;
-	border-radius: 6px;
-}
-
-table {
-	margin: auto;
-	font-size: 18px;
-}
-
-td {
-  width: 50%;
-  border-bottom: 1px solid #ababab;
-}
-
-th {
-  padding: 10px;
-  border-bottom: 1px solid #ababab;
-}	
-
-.center {
-	line-height: normal;
-  text-align: center;
-}
-
-.font-arial {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  width: 50%;
-  margin: auto;
-}
-
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-	margin: auto;
-}
-
-.active, .accordion:hover {
-  background-color: #ccc; 
-}
-
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
-	margin: auto;
-}
-</style>
-
 <script>
-	var acc = document.getElementsByClassName("accordion");
-	var i;
+  var acc = document.getElementsByClassName("accordion");
+  var i;
 
-	for (i = 0; i < acc.length; i++) {
-		acc[i].addEventListener("click", function() {
-			this.classList.toggle("active");
-			var panel = this.nextElementSibling;
-			if (panel.style.display === "block") {
-				panel.style.display = "none";
-			} else {
-				panel.style.display = "block";
-			}
-		});
-	}
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function () {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
 </script>
