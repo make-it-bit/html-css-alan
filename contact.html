@@ -1,24 +1,25 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<div class="center">
-			<div class="font-arial">
-					<h1>Contact form</h1>
-			</div>
-		</div>
-	</head>
-	<body>
-		<div class="center">
-			<div class="font-arial">
+  <head>
+    <!-- meta... -->
+  </head>
+  <body>
+    <div class="center">
+      <div class="font-arial">
+        <h1>Contact form</h1>
+      </div>
+    </div>
+    <div class="center">
+      <div class="font-arial">
         <div class="container">
           <form action="https://app.headlessforms.cloud/api/v1/form-submission/B3z2pz6exM" method="POST">
             <label for="fname">First Name</label>
-            <input type="text" id="fname" name="firstname" placeholder="John">
+            <input type="text" id="fname" name="firstname" placeholder="John" />
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" placeholder="Snow">
+            <input type="text" id="lname" name="lastname" placeholder="Snow" />
             <label for="email">Email</label>
-            <input type="text" id="email" name="email" placeholder="john@test.com">
-        
+            <input type="text" id="email" name="email" placeholder="john@test.com" />
+
             <label for="country">Country</label>
             <select id="country" name="country">
               <option value="estonia">Estonia</option>
@@ -26,79 +27,81 @@
               <option value="sweden">Sweden</option>
               <option value="norway">Norway</option>
             </select>
-        
-            <label for="subject">Subject</label>
-            <textarea id="subject" name="subject" placeholder="Write something.." style="height:75px"></textarea>
 
-            <input type="radio" id="freelance-gig" name="subject-reason" value="freelance-gig">
-            <label for="freelance-gig">Freelance gig</label><br>  
-            <input type="radio" id="invite-to-swimming" name="subject-reason" value="invite-to-swimming">
-            <label for="invite-to-swimming">Invite to swimming</label><br>
-            <input type="radio" id="report-bug" name="subject-reason" value="report-bug">
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height: 75px"></textarea>
+
+            <input type="radio" id="freelance-gig" name="subject-reason" value="freelance-gig" />
+            <label for="freelance-gig">Freelance gig</label><br />
+            <input type="radio" id="invite-to-swimming" name="subject-reason" value="invite-to-swimming" />
+            <label for="invite-to-swimming">Invite to swimming</label><br />
+            <input type="radio" id="report-bug" name="subject-reason" value="report-bug" />
             <label for="report-bug">Report a website bug</label>
-            
-            <fieldset class='gdprconsent'>
-              <input type='checkbox' name='gdprconsent' id='gdprconsent' required='required' autocomplete='off' />
-              <label for='gdprconsent'>I agree to the privacy policy.</label>
+
+            <fieldset class="gdprconsent">
+              <input type="checkbox" name="gdprconsent" id="gdprconsent" required="required" autocomplete="off" />
+              <label for="gdprconsent">I agree to the privacy policy.</label>
             </fieldset>
 
-            <input type="submit" value="Submit">
+            <input type="submit" value="Submit" />
           </form>
         </div>
-			</div>
-		</div>
-	</body>
+      </div>
+    </div>
+  </body>
 </html>
 
 <style scoped>
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
+  input[type='text'],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
 
-input[type=submit] {
-  background-color: #2ab2af;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
+  input[type='submit'] {
+    background-color: #2ab2af;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
 
-input[type=submit]:hover {
-  background-color: #337177;
-}
+  input[type='submit']:hover {
+    background-color: #337177;
+  }
 
-.gdprconsent {
-  margin-bottom: 20px;
-  border: none;
-}
+  .gdprconsent {
+    margin-bottom: 20px;
+    border: none;
+  }
 
-.container {
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  width: 25%;
-  margin: auto;
-}
+  .container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 25%;
+    margin: auto;
+  }
 
-.alignment-radio {
-	display: flex;
-	flex-direction: row;
-}
+  .alignment-radio {
+    display: flex;
+    flex-direction: row;
+  }
 
-.center {
-	line-height: normal;
-  text-align: center;
-}
+  .center {
+    line-height: normal;
+    text-align: center;
+  }
 
-.font-arial {
-  font-family: Arial, Helvetica, sans-serif;
-}
+  .font-arial {
+    font-family: Arial, Helvetica, sans-serif;
+  }
 </style>
