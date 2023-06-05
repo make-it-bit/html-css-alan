@@ -2,6 +2,9 @@ table {
   margin: auto;
   font-size: 18px;
   border-collapse: separate;
+  border-spacing: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
 }
 
 td {
@@ -29,6 +32,7 @@ th {
   padding: 20px;
   width: 50%;
   margin: auto;
+  margin-bottom: 50px;
 }
 
 .accordion {

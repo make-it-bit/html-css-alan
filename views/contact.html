@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
-    <link href="styles/shared.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/shared.css" rel="stylesheet" type="text/css" />
+    <link href="../styles/contact-style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
     <div class="topnav">
@@ -13,7 +14,7 @@
       <a href="about.html">About</a>
       <a class="active" href="contact.html">Contact</a>
     </div>
-    <div>
+    <div class="form-container">
       <form id="contact-form">
         <label for="fname">First Name</label>
         <input
@@ -91,7 +92,6 @@
         </fieldset>
 
         <input type="submit" value="Submit" onclick="submitForm()" />
-        <button onclick="checkform()">Check form</button>
       </form>
     </div>
   </body>
@@ -160,6 +160,7 @@
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    margin: auto;
   }
 
   input[type="submit"]:hover {
@@ -171,25 +172,8 @@
     border: none;
   }
 
-  .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-    width: 25%;
-    margin: auto;
-  }
-
   .alignment-radio {
     display: flex;
     flex-direction: row;
-  }
-
-  .center {
-    line-height: normal;
-    text-align: center;
-  }
-
-  .font-arial {
-    font-family: Arial, Helvetica, sans-serif;
   }
 </style>
