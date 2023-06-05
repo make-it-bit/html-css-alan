@@ -8,6 +8,7 @@ body {
   margin-top: 0;
   margin-left: 0;
   margin-right: 0;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .topnav {
