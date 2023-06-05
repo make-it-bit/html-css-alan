@@ -39,3 +39,9 @@ body {
 .content-container h1 {
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .content-container {
+    width: 75%;
+  }
+}
