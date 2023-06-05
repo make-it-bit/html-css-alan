@@ -2,18 +2,17 @@ table {
   margin: auto;
   font-size: 18px;
   border-collapse: separate;
-  border-spacing: 50px;
+  border-spacing: 35px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
 td {
-  width: 50%;
-    border-bottom: 1px solid #ababab;
+  border-bottom: 1px solid #ababab;
 }
 
 th {
-  padding: 10px;
+  padding: 2px;
   border-bottom: 1px solid #ababab;
 }
 
@@ -61,4 +60,16 @@ th {
   overflow: hidden;
   margin: auto;
   margin-bottom: 16px;
+}
+
+@media (max-width: 480px) {
+  table {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hobbies-container {
+    width: 75%;
+  }
 }
