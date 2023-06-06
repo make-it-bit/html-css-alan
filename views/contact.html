@@ -67,7 +67,7 @@
             value="freelance-gig"
             checked
           />
-          <span>Freelance gig</span>
+          <span class="radio-span">Freelance gig</span>
         </label>
         <label>
           <input
@@ -77,7 +77,7 @@
             name="subject-reason"
             value="invite-to-swimming"
           />
-          <span>Invite to swimming</span>
+          <span class="radio-span">Invite to swimming</span>
         </label>
         <label>
           <input
@@ -87,18 +87,23 @@
             name="subject-reason"
             value="report-bug"
           />
-          <span>Report a bug</span>
+          <span class="radio-span">Report a bug</span>
         </label>
 
-        <fieldset class="gdprconsent">
+        <div class="checkbox-container">
           <input
             type="checkbox"
-            name="gdprconsent"
+            class="check-input"
             id="gdprconsent"
             autocomplete="off"
           />
-          <label for="gdprconsent">I agree to the privacy policy.</label>
-        </fieldset>
+          <label for="gdprconsent" class="checkbox">
+            <svg viewBox="0 0 22 16" fill="none">
+              <path d="M1 6.85L8.09677 14L21 1" />
+            </svg>
+          </label>
+          <span>I agree to the privacy policy.</span>
+        </div>
 
         <input type="submit" value="Submit" onclick="submitForm()" />
       </form>
