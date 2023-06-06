@@ -8,12 +8,12 @@ table {
 }
 
 td {
-  border-bottom: 1px solid #ababab;
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 th {
   padding: 2px;
-  border-bottom: 1px solid #ababab;
+  border-bottom: 1px solid var(--secondary-color);
 }
 
 .img--thumbnail {
@@ -27,16 +27,16 @@ th {
 }
 
 .hobbies-container {
-  background-color: #f2f2f2;
-  padding: 20px;
+  background-color: var(--secondary-color);
+  padding: 35px;
   width: 50%;
   margin: auto;
   margin-bottom: 50px;
 }
 
 .accordion {
-  background-color: #f2f2f2;
-  color: #444;
+  background-color: var(--secondary-color);
+  color: black;
   cursor: pointer;
   padding: 18px;
   width: 100%;
@@ -50,13 +50,13 @@ th {
 
 .active,
 .accordion:hover {
-  background-color: #ccc;
+  background-color: var(--hover-color);
 }
 
 .panel {
   padding: 0 18px;
   display: none;
-  background-color: #e2e2e2;
+  background-color: var(--secondary-color);
   overflow: hidden;
   margin: auto;
   margin-bottom: 16px;

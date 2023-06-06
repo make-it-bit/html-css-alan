@@ -4,41 +4,48 @@
   font-weight: normal;
 }
 
+:root {
+  --primary-color: white;
+  --secondary-color: #d0e8ff;
+  --active-color: #d0e8ff;
+  --hover-color: #b2c7db;
+}
+
 body {
   margin-top: 0;
   margin-left: 0;
   margin-right: 0;
   -webkit-tap-highlight-color: transparent;
+  background-color: var(--primary-color);
 }
 
 .topnav {
   font-family: "Sublem", Helvetica, sans-serif;
   overflow: hidden;
   margin-bottom: 20px;
+  color: black;
 }
 
 .topnav a {
   float: left;
-  color: #000000;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 1.4rem;
-}
-
-.topnav a:hover {
-  background-color: #f2f2f2;
   color: black;
 }
 
+.topnav a:hover {
+  background-color: var(--active-color);
+}
+
 .topnav a.active {
-  background-color: #ccc;
-  color: rgb(0, 0, 0);
+  background-color: var(--active-color);
 }
 
 .content-container {
-  background-color: #f2f2f2;
-  padding: 20px;
+  background-color: var(--secondary-color);
+  padding: 35px;
   width: 50%;
   margin: auto;
 }
