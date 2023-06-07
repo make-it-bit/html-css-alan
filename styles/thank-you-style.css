@@ -1,0 +1,15 @@
+h1 {
+  font-family: "Sublem", Helvetica, sans-serif;
+  color: black;
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: "Sublem", Helvetica, sans-serif;
+  color: black;
+  font-size: rem;
+}
+
+.content-container {
+  background-color: transparent;
+}
