@@ -1,6 +1,10 @@
+/* kasuta css variable */
+/* pane navbari üks font css variga */
+/* pane bodysse teine */
+
 @font-face {
-  font-family: "Sublem";
-  src: url(/fonts/Sublem.ttf) format("truetype");
+  font-family: 'Sublem';
+  src: url(/fonts/Sublem.ttf) format('truetype');
   font-weight: normal;
 }
 
@@ -9,6 +13,10 @@
   --secondary-color: #d0e8ff;
   --active-color: #d0e8ff;
   --hover-color: #b2c7db;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
@@ -20,7 +28,7 @@ body {
 }
 
 .topnav {
-  font-family: "Sublem", Helvetica, sans-serif;
+  font-family: 'Sublem', Helvetica, sans-serif;
   overflow: hidden;
   margin-bottom: 20px;
   color: black;
@@ -50,6 +58,7 @@ body {
   margin: auto;
 }
 
+/* .text-center */
 .content-container h1,
 h2 {
   text-align: center;

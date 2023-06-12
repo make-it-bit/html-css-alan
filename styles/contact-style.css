@@ -31,7 +31,7 @@
   &:before {
     display: flex;
     flex-shrink: 0;
-    content: "";
+    content: '';
     background-color: var(--primary-color);
     width: 1.5em;
     height: 1.5em;
@@ -42,20 +42,19 @@
   }
 }
 
-input[type="text"],
+input[type='text'],
 select,
 textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  box-sizing: border-box;
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
 }
 
-input[type="submit"] {
+input[type='submit'] {
   background-color: #2ab2af;
   color: white;
   padding: 10px 20px;
@@ -66,7 +65,7 @@ input[type="submit"] {
   margin-top: 15px;
 }
 
-input[type="submit"]:hover {
+input[type='submit']:hover {
   background-color: #337177;
 }
 
@@ -116,7 +115,7 @@ input[type="submit"]:hover {
 }
 
 .checkbox::before {
-  content: "";
+  content: '';
   background: var(--form-control-active-color);
   position: absolute;
   border-radius: 50%;
