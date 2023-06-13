@@ -17,93 +17,109 @@
     </div>
     <div class="form-container">
       <form id="contact-form">
-        <label for="fname">First Name</label>
-        <input
-          type="text"
-          id="fname"
-          name="firstname"
-          placeholder="John"
-          required
-        />
-        <label for="lname">Last Name</label>
-        <input
-          type="text"
-          id="lname"
-          name="lastname"
-          placeholder="Snow"
-          required
-        />
-        <label for="email">Email</label>
-        <input
-          type="text"
-          id="email"
-          name="email"
-          placeholder="john@test.com"
-          required
-        />
-
-        <label for="country">Country</label>
-        <select id="country" name="country">
-          <option value="estonia">Estonia</option>
-          <option value="finland">Finland</option>
-          <option value="sweden">Sweden</option>
-          <option value="norway">Norway</option>
-        </select>
-
-        <label for="subject">Subject</label>
-        <textarea
-          id="subject"
-          name="subject"
-          placeholder="Write something.."
-          style="height: 75px"
-          required
-        ></textarea>
-
-        <label>
+        <div class="form-input">
+          <label for="fname">First Name</label>
           <input
-            class="radio-input"
-            type="radio"
-            id="freelance-gig"
-            name="subject-reason"
-            value="freelance-gig"
-            checked
+            type="text"
+            id="fname"
+            name="firstname"
+            placeholder="John"
+            required
           />
-          <span class="radio-span">Freelance gig</span>
-        </label>
-        <label>
+        </div>
+        <div class="form-input">
+          <label for="lname">Last Name</label>
           <input
-            class="radio-input"
-            type="radio"
-            id="invite-to-swimming"
-            name="subject-reason"
-            value="invite-to-swimming"
+            type="text"
+            id="lname"
+            name="lastname"
+            placeholder="Snow"
+            required
           />
-          <span class="radio-span">Invite to swimming</span>
-        </label>
-        <label>
+        </div>
+        <div class="form-input">
+          <label for="email">Email</label>
           <input
-            class="radio-input"
-            type="radio"
-            id="report-bug"
-            name="subject-reason"
-            value="report-bug"
+            type="text"
+            id="email"
+            name="email"
+            placeholder="john@test.com"
+            required
           />
-          <span class="radio-span">Report a bug</span>
-        </label>
+        </div>
+        <div class="form-input">
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="estonia">Estonia</option>
+            <option value="finland">Finland</option>
+            <option value="sweden">Sweden</option>
+            <option value="norway">Norway</option>
+          </select>
+        </div>
 
-        <div class="checkbox-container">
-          <input
-            type="checkbox"
-            class="check-input"
-            id="gdprconsent"
-            autocomplete="off"
-          />
-          <label for="gdprconsent" class="checkbox">
-            <svg viewBox="0 0 22 16" fill="none">
-              <path d="M1 6.85L8.09677 14L21 1" />
-            </svg>
+        <div class="form-input">
+          <label for="subject">Subject</label>
+          <textarea
+            id="subject"
+            name="subject"
+            placeholder="Write something.."
+            style="height: 75px"
+            required
+          ></textarea>
+        </div>
+        <div class="form-input">
+          <label>
+            <input
+              class="radio-input"
+              type="radio"
+              id="freelance-gig"
+              name="subject-reason"
+              value="freelance-gig"
+              checked
+            />
+            <span class="radio-span">Freelance gig</span>
           </label>
-          <span>I agree to the privacy policy.</span>
+        </div>
+        <div class="form-input">
+          <label>
+            <input
+              class="radio-input"
+              type="radio"
+              id="invite-to-swimming"
+              name="subject-reason"
+              value="invite-to-swimming"
+            />
+            <span class="radio-span">Invite to swimming</span>
+          </label>
+        </div>
+        <div class="form-input">
+          <label>
+            <input
+              class="radio-input"
+              type="radio"
+              id="report-bug"
+              name="subject-reason"
+              value="report-bug"
+            />
+            <span class="radio-span">Report a bug</span>
+          </label>
+        </div>
+
+        <div class="form-input">
+          <div class="checkbox-container">
+            <input
+              type="checkbox"
+              class="check-input"
+              id="gdprconsent"
+              autocomplete="off"
+            />
+            <label for="gdprconsent" class="checkbox">
+              <svg viewBox="0 0 22 16" fill="none">
+                <path d="M1 6.85L8.09677 14L21 1" />
+              </svg>
+            </label>
+            <span>I agree to the privacy policy.</span>
+          </div>
         </div>
 
         <input type="submit" value="Submit" onclick="submitForm()" />

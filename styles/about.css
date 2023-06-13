@@ -34,6 +34,10 @@
   margin-bottom: 50px;
 }
 
+.form-input {
+  color: red;
+}
+
 .accordion {
   background-color: var(--secondary-color);
   color: black;
