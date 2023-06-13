@@ -3,8 +3,8 @@
 /* pane bodysse teine */
 
 @font-face {
-  font-family: 'Sublem';
-  src: url(/fonts/Sublem.ttf) format('truetype');
+  font-family: "Sublem";
+  src: url(/fonts/Sublem.ttf) format("truetype");
   font-weight: normal;
 }
 
@@ -20,15 +20,12 @@
 }
 
 body {
-  margin-top: 0;
-  margin-left: 0;
-  margin-right: 0;
   -webkit-tap-highlight-color: transparent;
   background-color: var(--primary-color);
 }
 
 .topnav {
-  font-family: 'Sublem', Helvetica, sans-serif;
+  font-family: "Sublem", Helvetica, sans-serif;
   overflow: hidden;
   margin-bottom: 20px;
   color: black;
