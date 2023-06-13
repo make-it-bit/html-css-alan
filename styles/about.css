@@ -1,4 +1,4 @@
-table {
+.about-table table {
   margin: auto;
   font-size: rem;
   border-collapse: separate;
@@ -7,11 +7,11 @@ table {
   text-align: center;
 }
 
-td {
+.about-table td {
   border-bottom: 1px solid var(--secondary-color);
 }
 
-th {
+.about-table th {
   padding: 2px;
   border-bottom: 1px solid var(--secondary-color);
 }
